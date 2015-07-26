@@ -1,11 +1,13 @@
+/** BASE **/
+
 html {
     position: relative;
     min-height: 100%;
 }
 body {
     margin: 0 0 80px; /* bottom = footer height */
+    background-color: #fdfdfd;
 }
-
 
 footer {
     position: absolute;
@@ -13,7 +15,8 @@ footer {
     bottom: 0;
     height: 80px;
     width: 100%;
-    background: #1e1e1e;
+    background: #1e1e1e;    
+	border-top: #7a7a7a solid 2px;
 }
 
 div.footer {
@@ -24,22 +27,23 @@ div.footer {
 	letter-spacing: 0.04em;
 }
 
+
 /** ELEMENTS **/
 
 .clear {
     clear: both;
-    line-height: 3;
+    line-height: 1;
 }
 
 .fl { float: left; }
 
 .header {
 	width: 100%;
-	height: 110px;
+	height: 120px;
 	display: block;
 	text-align: center;
 	margin-bottom: 20px;
-	font-family: 'Lato';
+	font-family: 'Montserrat';
 	background: #1e1e1e;
 	padding-top: 25px;
 	padding-bottom: 20px;
@@ -48,6 +52,9 @@ div.footer {
 
 .header h1 {
 	font-weight: 500;
+	font-size: 40px;
+	margin-top: 20px;
+	margin-bottom: 15px;
 }
 
 .container {
@@ -56,13 +63,16 @@ div.footer {
 }
 
 hr {
-	color: #c7c7c7;
+	color: white;
+	background-color: white;
 	margin: 0 auto;
-	margin-top: 5px;
+	margin-top: 8px;
+	height: 2px;
+	border-width: 0;
 }
 
 hr.short {
-	width: 20%;
+	width: 14%;
 }
 
 a {
@@ -73,9 +83,16 @@ a {
 }
 
 a.button {
+	font-family: 'Montserrat';
+	font-weight: 700;
 	font-size: 30px;
 	line-height: 50px;
+	/*padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;*/
+	/*box-shadow: 3px 2px 12px #888888;*/
 }
+
 
 span {
 	font-family: 'Lato';
@@ -83,61 +100,27 @@ span {
 
 .header span {
 	font-weight: 300;
-	font-style: italic;
 }
 
 .footer span {
 	font-weight: 100;
 }
 
-/*table {
-	margin-top: 80px;
-	width: 100%;
-	border-collapse: collapse;
-}
-
-th {
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-	text-align: center;
-	color: #FFFFFF;
-	font-size: 36px;
-	height: 60px;
-}
-
-tr {
-	cursor: pointer;
-}
-
-th:hover {
-	text-shadow: 2px 2px #dedede;
-}
-
-tr:nth-child(4n), tr:nth-child(4n-1) {
-    background-color: #C3C3C3;
-}
-
-tr:nth-child(4n-2), tr:nth-child(4n-3) {
-    background-color: #313131;
-}
-
-td {
-	padding: 15px;
-}*/
 
 /** HOMEPAGE **/
 
 .container.main {
-	width: 1200px;
-	height: 300px;
+	width: 100%;
+	height: 280px;
 	display: block;
 	margin: 0 auto;
-	margin-top: 10%;
+	padding-top: 35px;
 	line-height: 20px;	
 	text-align: center;
 }
 
 .menu a {
+	font-family: 'Lato';
 	color: #fff;
 	padding-left: 16px;
 	padding-right: 8px;
@@ -147,23 +130,34 @@ a.band {
 	font-weight: 400;
 	font-size: 20px;
 	text-decoration: none;
-	text-transform: none;
+	text-transform: none;	
+	transition: all 250ms ease-out;
+}
+
+a.band:hover {
+	margin-left: 8px;
 }
 
 div.all-bands {
 	width: 100%;
 	float: left;
 	text-align: left;
-	margin-top: 20px;
-	margin-left: 10%;
+	margin-top: 10px;	
+	margin-bottom: 20px;
+	padding-left: 10%;
+	padding-right: 0px;
 
 	-webkit-column-count: 3;
       -moz-column-count: 3;
            column-count: 3;
 
-   -webkit-column-gap: 20px;
-      -moz-column-gap: 20px;
-           column-gap: 20px;
+   -webkit-column-gap: 50px;
+      -moz-column-gap: 50px;
+           column-gap: 50px;
+
+   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
 .all-bands span {
@@ -180,7 +174,6 @@ div.all-bands {
 	background-color: #fff;
 	margin: 63px;
 	position: relative;
-	/*border-bottom: 5px solid #000000;*/
 }
 
 .album img {
@@ -190,13 +183,6 @@ div.all-bands {
 	width: 300px;
 }
 
-/*#listen {
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-	text-transform: uppercase;
-	width: 100%;
-	text-align: center;
-}*/
 
 .album .description {
 	font-family: 'Josefin Slab';
@@ -209,7 +195,6 @@ div.all-bands {
 	opacity: 0;
 	letter-spacing: 0.02em;
 	overflow: auto;
-
 	margin-bottom: 20px;
 }
 
@@ -231,35 +216,64 @@ div.all-bands {
 	margin-right: auto;
 }
 
-audio {
-	
+/** CODEPEN (BY @ASHNOLAN) **/
+
+.btn {
+  position: relative;
+  display: block;
+  width: 250px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform-style: flat;
+  transition: all 250ms ease-out;
+}
+.btn:before, .btn:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  transition: all 250ms ease-out;
 }
 
-/*.columns div {
-	font-size: 14px;
-	float: left;
-	width: 45%;
-	text-align: left;
+/* Paper effect – slightly raised off background */
+.paper {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+  border-color: #dedede;
 }
 
-div#column2 {	
-	padding-left: 22px;
+/* Raised effect – pushes up on hover */
+.paper-raise:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.paper-raise:hover {
+  border: 1px solid #fff;
+}
+.paper-raise:hover:before {
+  box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
 }
 
-.columns li {
-	text-align: left;
-	font-size: 14px;
-}*/
-
-/*.audio-controls {
-	width: 300px;
-	display: block;
-	text-align: center;
-	position: absolute;
-}*/
-
-/*.audio-controls button {
-	width: 80px;
-	margin: 5px;
-}*/
-
+.paper-raise-flatten {
+  border-color: #fff;
+  box-shadow: none;
+}
+.paper-raise-flatten:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+}
+.paper-raise-flatten:hover {
+  border-color: #dedede;
+}
+.paper-raise-flatten:hover:before {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
