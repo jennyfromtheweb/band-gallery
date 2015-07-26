@@ -44,7 +44,7 @@
         <div class="audio">
           <audio controls id="album-audio" preload="auto">
             <source src="<?php echo getRandomTrackPreview($info); ?>" type="audio/mpeg">
-            This audio is too cool for your browser.
+            Oops, your browser isn't compatible with the audio player.
           </audio>
         </div>
       </div>

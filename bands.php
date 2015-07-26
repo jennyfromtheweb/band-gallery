@@ -19,7 +19,19 @@ $bands = array(
         "Imagine Dragons",
         "M83",
         "Odesza",
-        "Sia"
+        "Sia",
+        "Benjamin Francis Leftwich",
+        "Bon Iver",
+        "Hillsong United",
+        "Switchfoot",
+        "Made in Heights",
+        "Mikky Ekko",
+        "The Neighbourhood",
+        "Of Monsters and Men",
+        "Mumford & Sons",
+        "Ingrid Michaelson",
+        "The Naked and Famous",
+        "Sigur Rós"
         );      
 
 ?>

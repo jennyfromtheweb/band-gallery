@@ -22,9 +22,10 @@ footer {
 div.footer {
 	font-size: 13px;
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 30px;
 	color: #fff;
 	letter-spacing: 0.04em;
+	font-family: 'Lato';
 }
 
 
@@ -48,6 +49,7 @@ div.footer {
 	padding-top: 25px;
 	padding-bottom: 20px;
 	color: #fff;
+	border-bottom: #7a7a7a solid 2px;
 }
 
 .header h1 {
@@ -76,10 +78,9 @@ hr.short {
 }
 
 a {
-	font-family: 'Josefin Slab';
 	cursor: crosshair;
 	text-decoration: none;
-	color: #000000;
+	color: #fff;
 }
 
 a.button {
@@ -104,6 +105,13 @@ span {
 
 .footer span {
 	font-weight: 100;
+	line-height: 20px;
+}
+
+.footer span a {
+	cursor: auto;
+	margin-bottom: 2px;
+	border-bottom: 1px solid #fff;
 }
 
 
@@ -127,8 +135,10 @@ span {
 }
 
 a.band {
+	font-family: 'Josefin Slab';
 	font-weight: 400;
 	font-size: 20px;
+	color: #000000;
 	text-decoration: none;
 	text-transform: none;	
 	transition: all 250ms ease-out;
@@ -196,6 +206,7 @@ div.all-bands {
 	letter-spacing: 0.02em;
 	overflow: auto;
 	margin-bottom: 20px;
+	transition: all 250ms ease-out;
 }
 
 .album .description:hover {

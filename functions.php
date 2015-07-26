@@ -21,6 +21,11 @@
 
     function getArtistId($band) {
       $url = "https://api.spotify.com/v1/search?type=artist&q=" . str_replace(' ', '+', $band);
+
+      if (strpos($url, "ó") !== FALSE){
+        $url = str_replace("ó", "o", $url);
+      }
+
       $json = file_get_contents($url);
       $results = json_decode($json, true);
       $top = $results["artists"]["items"][0];
