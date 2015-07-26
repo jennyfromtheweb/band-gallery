@@ -8,6 +8,7 @@
   <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="audiojs/audio.min.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -16,13 +17,19 @@
   include("functions.php");
 ?>
 
+<script type="text/javascript">
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script>
+
 <div class="header">
   <h1><?php echo $band ?></h1>
 
   <div class="menu">
-    <a href="index.php">home</a>
+    <a href="index.php" title="'cause I'm gonna make this place your home">home</a>
     <?php $random = array_rand($bands); ?>
-    <a href="profile.php?band=<?php echo $bands[$random]; ?>">random</a>
+    <a href="profile.php?band=<?php echo $bands[$random]; ?>" title="hit me baby one more time">random</a>
   </div>
 
   <hr class="short">
@@ -42,14 +49,15 @@
           </p>
         </div>
         <div class="audio">
-          <audio controls id="album-audio" preload="auto">
+          <audio src="<?php echo getRandomTrackPreview($info); ?>" preload="auto" />
+          <!-- <audio controls id="album-audio" preload="auto">
             <source src="<?php echo getRandomTrackPreview($info); ?>" type="audio/mpeg">
             Oops, your browser isn't compatible with the audio player.
-          </audio>
+          </audio> -->
         </div>
       </div>
   <?php } ?>
-  <br class="clear"><br>
+  <br class="clear"><br><br><br>
 </div>
 
 <?php include("footer.php"); ?>

@@ -27,9 +27,9 @@
 </script>
 
 <div class="header">
-  <h1>Jenny's Music Gallery</h1>
-  <span>Ready to discover new music?<br>
-  Check out my favorite bands and artists.</span>
+  <h1>Ready to discover new music?</h1>
+  <span>I'm finding new songs to love all the time.<br>
+  Preview albums from my favorite bands and artists here.</span>
 </div>
 
 
@@ -57,7 +57,7 @@
     </div>
 </div>
 
-<br class="clear"><br>
+<br class="clear"><br><br>
 <?php include("footer.php"); ?>
 
 </body>

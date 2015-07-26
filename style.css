@@ -43,11 +43,11 @@ div.footer {
 	height: 120px;
 	display: block;
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	font-family: 'Montserrat';
 	background: #1e1e1e;
 	padding-top: 25px;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	color: #fff;
 	border-bottom: #7a7a7a solid 2px;
 }
@@ -56,7 +56,7 @@ div.footer {
 	font-weight: 500;
 	font-size: 40px;
 	margin-top: 20px;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
 
 .container {
@@ -91,9 +91,8 @@ a.button {
 	/*padding: 4px;
 	padding-left: 8px;
 	padding-right: 8px;*/
-	/*box-shadow: 3px 2px 12px #888888;*/
+	box-shadow: 1px 2px 8px #888888;
 }
-
 
 span {
 	font-family: 'Lato';
@@ -105,7 +104,14 @@ span {
 
 .footer span {
 	font-weight: 100;
-	line-height: 20px;
+	line-height: 23px;
+	word-spacing: 0.1em;
+}
+
+.footer .heart {
+	font-size: 12px;
+	color: #da4e4e;
+	margin-left: 2px;
 }
 
 .footer span a {
@@ -113,6 +119,55 @@ span {
 	margin-bottom: 2px;
 	border-bottom: 1px solid #fff;
 }
+
+
+/** AUDIO **/
+
+.audiojs .scrubber {
+    background: none repeat scroll 0 0 #5A5A5A;
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-top: 1px solid #3F3F3F;
+    float: left;
+    height: 14px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 160px;
+}
+
+.audiojs .loaded {
+	border: none;
+	background: #7a7a7a;
+    background-image: none;
+}
+
+.audiojs .progress {
+	border: none;
+	background: #f1f1f1;
+    background-image: none;
+}
+
+.audiojs .time {
+    border-left: 1px solid #000000;
+    color: #f1f1f1;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin: 0; /* no margin */
+    padding: 0 6px 0 9px; /* 2px smaller left padding */
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.audiojs {
+    font-family: 'Lato';
+    font-size: 10px; /* reduced font size */
+    width: 300px;
+    box-shadow: none;
+    background: #1e1e1e;
+    background-image: none;
+}
+
 
 
 /** HOMEPAGE **/
@@ -237,7 +292,8 @@ div.all-bands {
   padding: 10px;
   background-color: #fff;
   border: 1px solid #ccc;
-  color: #000;
+  /*color: #000;*/
+  color: #da4e4e;;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;

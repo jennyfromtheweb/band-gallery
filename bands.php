@@ -31,7 +31,9 @@ $bands = array(
         "Mumford & Sons",
         "Ingrid Michaelson",
         "The Naked and Famous",
-        "Sigur Rós"
+        "Sigur Rós",
+        "Lemaitre",
+        "Passion Pit"
         );      
 
 ?>
