@@ -28,7 +28,7 @@
 
 <div class="header">
   <h1>Ready to discover new music?</h1>
-  <span>I'm finding new songs to love all the time.<br>
+  <span>I'm finding new songs all the time.<br>
   Preview albums from my favorite bands and artists here.</span>
 </div>
 
