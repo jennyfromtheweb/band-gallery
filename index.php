@@ -10,32 +10,10 @@
 </head>
 <body>
 
-   <?php 
-
-    $bands = array(
-        "Handsome Ghost",
-        "Explosions in the Sky",
-        "Hammock",
-        "Coldplay",
-        "OneRepublic",
-        "The Fray",
-        "The 1975",
-        "Small Black",
-        "Lorde",
-        "Night Terrors of 1927",
-        "Kina Grannis",
-        "Andrew Belle",
-        "Bastille",
-        "Daughter",
-        "Helios",
-        "Imagine Dragons",
-        "M83",
-        "Odesza",
-        "Sia"
-        );      
-      
-    include("functions.php");
-   ?>
+ <?php 
+  include("bands.php");
+  include("functions.php");
+ ?>
 
 <script type = "text/javascript">
   function showDiv() {
@@ -60,8 +38,8 @@
 
       $random = array_rand($bands);
     ?>
-    <a class="button" href="profile.php?band=<?php echo $bands[$random]; ?>">feelin' lucky</a>
-    <br><br>
+    <a class="button" href="profile.php?band=<?php echo $bands[$random]; ?>">~ feelin' lucky ~</a>
+    <br class="clear">
     <a class="button" onclick="showDiv()">click for full list</a>
     <div id="hide-show"  style="display:none;" class="all-bands">
       <?php 

@@ -10,13 +10,22 @@
 </head>
 <body>
 
-<?php include("functions.php"); ?>
+<?php 
+  include("bands.php");
+  include("functions.php");
+?>
 
 <div class="header">
   <h1><?php echo $band ?></h1>
-</div>
 
-<hr>
+  <div class="menu">
+    <a href="index.php">home</a>
+    <?php $random = array_rand($bands); ?>
+    <a href="profile.php?band=<?php echo $bands[$random]; ?>">random</a>
+  </div>
+
+  <hr class="short">
+</div>
 
 <div class="container">
   <?php 

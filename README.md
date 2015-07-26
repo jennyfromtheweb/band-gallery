@@ -1,1 +1,1 @@
-# band-gallery
+A website featuring my favorite bands and artists with audio previews of their albums.

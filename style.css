@@ -13,7 +13,7 @@ footer {
     bottom: 0;
     height: 80px;
     width: 100%;
-    background: #000000;
+    background: #1e1e1e;
 }
 
 div.footer {
@@ -28,20 +28,22 @@ div.footer {
 
 .clear {
     clear: both;
-    line-height: 0;
+    line-height: 3;
 }
 
 .fl { float: left; }
 
 .header {
 	width: 100%;
-	height: 60%;
+	height: 110px;
 	display: block;
-	opacity: 0.8;
 	text-align: center;
-	margin-top: 50px;
 	margin-bottom: 20px;
-	font-family: 'Lato'
+	font-family: 'Lato';
+	background: #1e1e1e;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	color: #fff;
 }
 
 .header h1 {
@@ -53,11 +55,26 @@ div.footer {
 	width: 100%;
 }
 
+hr {
+	color: #c7c7c7;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+hr.short {
+	width: 20%;
+}
+
 a {
 	font-family: 'Josefin Slab';
 	cursor: crosshair;
 	text-decoration: none;
 	color: #000000;
+}
+
+a.button {
+	font-size: 30px;
+	line-height: 50px;
 }
 
 span {
@@ -115,10 +132,15 @@ td {
 	height: 300px;
 	display: block;
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-top: 10%;
 	line-height: 20px;	
 	text-align: center;
+}
 
+.menu a {
+	color: #fff;
+	padding-left: 16px;
+	padding-right: 8px;
 }
 
 a.band {
