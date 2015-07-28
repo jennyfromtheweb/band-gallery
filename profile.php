@@ -24,7 +24,11 @@
 </script>
 
 <div class="header">
-  <h1><?php echo $band ?></h1>
+  <h1><?php 
+    $artist_id = getArtistId($band);
+    $fullName = getArtistFullName($artist_id);
+
+  echo $fullName; ?></h1>
 
   <div class="menu">
     <a href="index.php" title="'cause I'm gonna make this place your home">home</a>

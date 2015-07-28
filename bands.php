@@ -33,7 +33,10 @@ $bands = array(
         "The Naked and Famous",
         "Sigur Rós",
         "Lemaitre",
-        "Passion Pit"
+        "Passion Pit",
+        "Hans Zimmer",
+        "MisterWives",
+        "Smallpools"
         );      
 
 ?>

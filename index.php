@@ -27,9 +27,9 @@
 </script>
 
 <div class="header">
-  <h1>Ready to discover new music?</h1>
-  <span>I'm finding new songs all the time.<br>
-  Preview albums from my favorite bands and artists here.</span>
+  <h1>Jenny's Music Gallery</h1>
+  <span>Ready to discover new music?<br>
+  Preview albums from bands and artists I love.</span>
 </div>
 
 
@@ -41,18 +41,12 @@
       $random = array_rand($bands);
     ?>
 
-    <a class="button btn paper paper-raise-flatten" href="profile.php?band=<?php echo $bands[$random]; ?>">surprise me!</a>
+    <a class="button btn paper paper-raise-flatten" href="profile.php?band=<?php echo $bands[$random]; ?>" >surprise me!</a>
     <br class="clear">
-    <!-- <a class="button" onclick="showDiv()">click for full list</a> -->
     <div id="hide-show"  style="display:block;" class="all-bands">
       <?php 
-        foreach($bands as $band) {
-          $link = $band;
-          if (strpos($link, "&") !== FALSE){
-            $link = str_replace("&", "%26", $link);
-          }
-          ?>
-          <span><a href="profile.php?band=<?php echo $link; ?>" class="band"><?php echo $band; ?></a></span><br>
+        foreach($bands as $band) { ?>
+          <span><a href="profile.php?band=<?php echo $band; ?>" class="band"><?php echo $band; ?></a></span><br>
       <?php } ?>
     </div>
 </div>

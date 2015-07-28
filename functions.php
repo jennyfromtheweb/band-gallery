@@ -32,6 +32,13 @@
       return $top["id"];
     }
 
+    function getArtistFullName($id) {
+      $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
+      $result = json_decode($url, true);
+      $name = $result["name"];
+      return $name; 
+    }
+
     function getRandomTrackPreview($info) {
       $tracks = $info["tracks"]["items"];
       $num_songs = count($tracks);
