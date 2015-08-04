@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
+<?php 
+  include("bands.php");
+  include("functions.php");
+  $artist_id = getArtistId($band);
+  $favicon = getArtistFavicon($artist_id);
+?>
+
 <head>
   <meta charset="UTF-8">
-  <title>Jenny's Favorite Bands</title>
+  <title><?php echo "// ". $band . " //"; ?></title>
   <link rel="stylesheet" href="style.css" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <script src="audiojs/audio.min.js" type="text/javascript"></script>
+  <link rel="icon" 
+      type="image/jpg" 
+      href="<?php echo $favicon; ?>">
 </head>
 <body>
-
-<?php 
-  include("bands.php");
-  include("functions.php");
-  $artist_id = getArtistId($band);
-?>
 
 <script type="text/javascript">
   audiojs.events.ready(function() {
@@ -40,7 +44,7 @@
 </div>
 
 <div class="header">
-  <br>
+<br><br>
   <h1><?php
     $fullName = getArtistFullName($artist_id);
     echo $fullName; ?>
@@ -48,7 +52,7 @@
 </div>
 
 <div class="container">
-  <?php 
+  <?php
     $albums = findAlbums($band);
     foreach($albums as $name => $info) { ?>                
       <div class="album">

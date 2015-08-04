@@ -10,7 +10,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <link rel="icon" 
       type="image/jpg" 
-      href="img/favicon.jpg">
+      href="img/favicon.png">
 </head>
 <body>
 

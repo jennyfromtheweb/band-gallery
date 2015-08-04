@@ -45,10 +45,10 @@
       return $name; 
     }
 
-    function getArtistImage($id) {
+    function getArtistFavicon($id) {
       $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
       $result = json_decode($url, true);
-      $img = $result["images"][0]["url"];
+      $img = $result["images"][2]["url"];
       return $img; 
     }
 
