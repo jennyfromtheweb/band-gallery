@@ -32,11 +32,24 @@
       return $top["id"];
     }
 
+    function getArtistURL($id) {
+      $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
+      $result = json_decode($url, true);
+      return $result["external_urls"]["spotify"];
+    }
+
     function getArtistFullName($id) {
       $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
       $result = json_decode($url, true);
       $name = $result["name"];
       return $name; 
+    }
+
+    function getArtistImage($id) {
+      $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
+      $result = json_decode($url, true);
+      $img = $result["images"][0]["url"];
+      return $img; 
     }
 
     function getRandomTrackPreview($info) {

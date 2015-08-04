@@ -15,6 +15,7 @@
 <?php 
   include("bands.php");
   include("functions.php");
+  $artist_id = getArtistId($band);
 ?>
 
 <script type="text/javascript">
@@ -23,20 +24,27 @@
   });
 </script>
 
-<div class="header">
-  <h1><?php 
-    $artist_id = getArtistId($band);
-    $fullName = getArtistFullName($artist_id);
-
-  echo $fullName; ?></h1>
-
-  <div class="menu">
-    <a href="index.php" title="'cause I'm gonna make this place your home">home</a>
-    <?php $random = array_rand($bands); ?>
-    <a href="profile.php?band=<?php echo $bands[$random]; ?>" title="hit me baby one more time">random</a>
+<div class="nav">
+  <div class="home">
+    <a href="index.php" title="'cause I'm gonna make this place your home"></a>
   </div>
 
-  <hr class="short">
+  <div class="random">
+    <?php $random = array_rand($bands); ?>
+    <a href="profile.php?band=<?php echo $bands[$random]; ?>" title="hit me baby one more time"></a>
+  </div>
+
+  <div class="follow">
+    <a href="<?php echo getArtistURL($artist_id); ?>" class="follow"></a>
+  </div>
+</div>
+
+<div class="header">
+  <br>
+  <h1><?php
+    $fullName = getArtistFullName($artist_id);
+    echo $fullName; ?>
+  </h1>
 </div>
 
 <div class="container">

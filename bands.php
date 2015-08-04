@@ -29,14 +29,14 @@ $bands = array(
         "The Neighbourhood",
         "Of Monsters and Men",
         "Mumford & Sons",
-        "Ingrid Michaelson",
         "The Naked and Famous",
         "Sigur Rós",
         "Lemaitre",
         "Passion Pit",
-        "Hans Zimmer",
         "MisterWives",
-        "Smallpools"
+        "Smallpools",
+        "AURORA",
+        "Snow Patrol"
         );      
 
 ?>
