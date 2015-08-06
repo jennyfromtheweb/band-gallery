@@ -59,6 +59,10 @@ div.footer {
 	margin-bottom: 20px;
 }
 
+.nav a {
+	cursor: auto;
+}
+
 .container {
 	min-height: 100%;
 	width: 100%;
@@ -77,13 +81,13 @@ hr.short {
 	width: 14%;
 }
 
-a {
+a {	
+	cursor: crosshair;
 	text-decoration: none;
 	color: #fff;
 }
 
-a.button {	
-	cursor: crosshair;
+a.button {
 	font-family: 'Montserrat';
 	font-weight: 700;
 	font-size: 30px;
@@ -297,7 +301,7 @@ div.nav {
 
 .nav div {
 	width: 40px;
-	height: 35px;
+	height: 40px;
 	margin: 10px;
 }
 

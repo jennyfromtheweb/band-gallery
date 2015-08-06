@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^band/([0-9]+)/?$ profile.php?id=$1

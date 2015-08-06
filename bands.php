@@ -36,7 +36,9 @@ $bands = array(
         "MisterWives",
         "Smallpools",
         "AURORA",
-        "Snow Patrol"
-        );      
+        "Snow Patrol",
+        "Lifehouse"
+        );
+sort($bands);     
 
 ?>

@@ -3,6 +3,8 @@
 <?php 
   include("bands.php");
   include("functions.php");
+  $id = $_GET['id'];
+  $band = $bands[$id];
   $artist_id = getArtistId($band);
   $favicon = getArtistFavicon($artist_id);
 ?>
@@ -35,7 +37,7 @@
 
   <div class="random">
     <?php $random = array_rand($bands); ?>
-    <a href="profile.php?band=<?php echo $bands[$random]; ?>" title="hit me baby one more time"></a>
+    <a href="profile.php?id=<?php echo $random; ?>" title="hit me baby one more time"></a>
   </div>
 
   <div class="follow">

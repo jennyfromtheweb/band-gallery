@@ -52,6 +52,13 @@
       return $img; 
     }
 
+    function getArtistGenres($id) {
+      $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
+      $result = json_decode($url, true);
+      $genres = $result["genres"];
+      return $genres;
+    }
+
     function getRandomTrackPreview($info) {
       $tracks = $info["tracks"]["items"];
       $num_songs = count($tracks);

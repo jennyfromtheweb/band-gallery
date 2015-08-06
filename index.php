@@ -19,37 +19,22 @@
   include("functions.php");
  ?>
 
-<script type = "text/javascript">
-  function showDiv() {
-    var e = document.getElementById("hide-show");
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-  }
-</script>
-
 <div class="header">
   <h1>Jenny's Music Gallery</h1>
   <span>Ready to discover new music?<br>
   Preview albums from bands and artists I love.</span>
 </div>
 
-
   
 <div class="container main">
-    <?php 
-      sort($bands);
+    <?php $random = array_rand($bands); ?>
 
-      $random = array_rand($bands);
-    ?>
-
-    <a class="button btn paper paper-raise-flatten" href="profile.php?band=<?php echo $bands[$random]; ?>" >surprise me!</a>
+    <a class="button btn paper paper-raise-flatten" href="profile.php?id=<?php echo $random; ?>" >surprise me!</a>
     <br class="clear">
     <div id="hide-show"  style="display:block;" class="all-bands">
       <?php 
-        foreach($bands as $band) { ?>
-          <span><a href="profile.php?band=<?php echo $band; ?>" class="band"><?php echo $band; ?></a></span><br>
+        foreach($bands as $id => $band) { ?>
+          <span><a href="profile.php?id=<?php echo $id; ?>" class="band"><?php echo $band; ?></a></span><br>
       <?php } ?>
     </div>
 </div>
