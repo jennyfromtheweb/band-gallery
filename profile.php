@@ -6,12 +6,13 @@
   $id = $_GET['id'];
   $band = $bands[$id];
   $artist_id = getArtistId($band);
-  $favicon = getArtistFavicon($artist_id);
+  $json_file = decodeJSON($artist_id); 
+  $favicon = getArtistFavicon($json_file);
 ?>
 
 <head>
   <meta charset="UTF-8">
-  <title><?php echo "// ". $band . " //"; ?></title>
+  <title><?php echo $band . " | Jenny's Music Gallery"; ?></title>
   <link rel="stylesheet" href="style.css" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
@@ -40,15 +41,15 @@
     <a href="profile.php?id=<?php echo $random; ?>" title="hit me baby one more time"></a>
   </div>
 
-  <div class="follow">
-    <a href="<?php echo getArtistURL($artist_id); ?>" class="follow"></a>
-  </div>
+  <!-- <div class="follow">
+    <a href="<?php echo getArtistURL($json_file); ?>" class="follow"></a>
+  </div> -->
 </div>
 
 <div class="header">
-<br><br>
-  <h1><?php
-    $fullName = getArtistFullName($artist_id);
+<br>
+  <h1 class="band"><?php
+    $fullName = getArtistFullName($json_file);
     echo $fullName; ?>
   </h1>
 </div>
@@ -60,19 +61,23 @@
       <div class="album">
         <img src="<?php echo getAlbumCover($info); ?>">
         <div class="description">
-          <h2><?php echo $name; ?></h2>
-          <h4>(<?php echo getYearRecorded($info); ?>)</h4>
-          <p>
-            <?php displayTrackList($info); ?>
-          </p>
+          <div class="overlay"></div>
+          <div class="text">
+            <h2><?php echo $name; ?></h2>
+            <h4>(<?php echo getYearRecorded($info); ?>)</h4>
+            <p>
+              <?php displayTrackList($info); ?>
+            </p>
+          </div>
         </div>
+        <?php 
+          $track = getRandomTrack($info);
+          $preview = getTrackPreview($track);
+        ?>
         <div class="audio">
-          <audio src="<?php echo getRandomTrackPreview($info); ?>" preload="auto" />
-          <!-- <audio controls id="album-audio" preload="auto">
-            <source src="<?php echo getRandomTrackPreview($info); ?>" type="audio/mpeg">
-            Oops, your browser isn't compatible with the audio player.
-          </audio> -->
+          <audio src="<?php echo $preview; ?>" preload="none" />
         </div>
+        <div class="spotify-url"><a href="<?php echo getTrackURL($track); ?>" target="_blank"></a></div>
       </div>
   <?php } ?>
   <br class="clear"><br><br><br>

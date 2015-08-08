@@ -81,8 +81,7 @@ hr.short {
 	width: 14%;
 }
 
-a {	
-	cursor: crosshair;
+a {
 	text-decoration: none;
 	color: #fff;
 }
@@ -139,7 +138,7 @@ span {
     margin: 10px;
     overflow: hidden;
     position: relative;
-    width: 160px;
+    width: 140px;
 }
 
 .audiojs .loaded {
@@ -154,6 +153,11 @@ span {
     background-image: none;
 }
 
+.audiojs .play-pause {
+	width: 20px;
+	padding: 4px 5px;
+}
+
 .audiojs .time {
     border-left: 1px solid #000000;
     color: #f1f1f1;
@@ -161,7 +165,7 @@ span {
     height: 36px;
     line-height: 36px;
     margin: 0; /* no margin */
-    padding: 0 6px 0 9px; /* 2px smaller left padding */
+    padding: 0 6px 0 5px; /* 2px smaller left padding */
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -196,6 +200,7 @@ span {
 }
 
 a.band {
+	cursor: crosshair;
 	font-family: 'Josefin Slab';
 	font-weight: 400;
 	font-size: 20px;
@@ -237,57 +242,6 @@ div.all-bands {
 
 
 /** BAND PROFILE **/
-
-.album {
-	float: left;
-	width: 300px;
-	height: 300px;
-	background-color: #fff;
-	margin: 63px;
-	position: relative;
-}
-
-.album img {
-	float: left;
-	vertical-align: center;
-	height: 300px;
-	width: 300px;
-}
-
-
-.album .description {
-	font-family: 'Josefin Slab';
-	position: absolute;
-	width: 300px;
-	height: 270px;
-	display: block;
-	text-align: center;
-	padding-top: 30px;
-	opacity: 0;
-	letter-spacing: 0.02em;
-	overflow: auto;
-	margin-bottom: 20px;
-	transition: all 250ms ease-out;
-}
-
-.album .description:hover {
-	opacity: 0.7;
-	background: #fefefe;
-}
-
-.album h2 {
-	font-weight: 700;
-	font-size: 20px;
-	text-transform: uppercase;
-}
-
-.album p {
-	font-size: 16px;
-	width: 280px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 
 div.nav {
 	font-family: 'Lato';
@@ -362,6 +316,104 @@ div.follow {
 	background-repeat: no-repeat;
 }
 
+.header h1.band {
+	font-size: 50px;
+}
+
+.album {
+	float: left;
+	width: 300px;
+	height: 300px;
+	background-color: #fff;
+	margin: 63px;
+	position: relative;
+}
+
+.album img {
+	float: left;
+	vertical-align: center;
+	height: 292px;
+	width: 292px;
+	border: 4px solid #1e1e1e;
+	border-bottom: none;
+	z-index: -50;
+}
+
+div.overlay {
+	background-color: #fefefe;
+	position: absolute;
+	width: 284px;
+	height: 284px;
+	padding: 4px;
+	transition: all 250ms ease-out;
+	z-index: -10;
+}
+
+.album .description {
+	position: absolute;
+	width: 292px;
+	height: 288px;
+	display: block;
+	text-align: center;
+	padding: 4px;
+	opacity: 0;		
+	/*overflow: auto;*/
+	/*z-index: 10;*/
+}
+
+.album .description:hover {
+	opacity: 0.7;
+}
+
+.album .text {
+	font-family: 'Josefin Slab';
+	letter-spacing: 0.02em;
+	margin: 10px;
+	z-index: 10;
+
+	overflow: auto;
+	position: absolute;
+	width: 272px;
+	height: 272px;
+	display: block;
+}
+
+.text h4 {
+	margin-top: -10px;
+}
+
+.album h2 {
+	font-weight: 700;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.album p {
+	font-size: 16px;
+	width: 251px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.spotify-url {
+	z-index: 1;
+	margin-top: -40px;
+	height: 40px;
+}
+
+.spotify-url a {
+	width: 24px;
+	height: 24px;
+	display: block;
+	float: right;
+	margin: 6px 6px;
+
+	background-image: url("img/spotify-logo-primary-vertical-dark-background-rgb.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
 /** CODEPEN (BY @ASHNOLAN) **/
 
 .btn {
@@ -424,3 +476,4 @@ div.follow {
 .paper-raise-flatten:hover:before {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
+

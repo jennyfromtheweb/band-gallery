@@ -1,6 +1,11 @@
 <?php
     $band = $_GET["band"];
 
+    function decodeJSON($id) {     
+      $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
+      return json_decode($url, true); 
+    }
+
     function findAlbums($band) {
       $id = getArtistId($band);
 
@@ -32,42 +37,43 @@
       return $top["id"];
     }
 
-    function getArtistURL($id) {
-      $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
-      $result = json_decode($url, true);
-      return $result["external_urls"]["spotify"];
+    function getArtistURL($info) {
+      return $info["external_urls"]["spotify"];
     }
 
-    function getArtistFullName($id) {
-      $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
-      $result = json_decode($url, true);
-      $name = $result["name"];
-      return $name; 
+    function getArtistFullName($info) {
+      return $info["name"];
     }
 
-    function getArtistFavicon($id) {
-      $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
-      $result = json_decode($url, true);
-      $img = $result["images"][2]["url"];
-      return $img; 
+    function getArtistFavicon($info) {
+      return $info["images"][2]["url"]; 
     }
 
-    function getArtistGenres($id) {
-      $url = file_get_contents("https://api.spotify.com/v1/artists/" . $id);
-      $result = json_decode($url, true);
-      $genres = $result["genres"];
-      return $genres;
+    function getArtistGenres($info) {
+      return $info["genres"];
     }
 
-    function getRandomTrackPreview($info) {
+    function getRandomTrack($info) {
       $tracks = $info["tracks"]["items"];
       $num_songs = count($tracks);
       $random_track = $tracks[rand(0, $num_songs - 1)];
-      return $random_track["preview_url"];
+      return $random_track;
+    }
+
+    function getTrackPreview($track) {
+      return $track["preview_url"];
+    }
+
+    function getTrackURL($track) {
+      return $track["external_urls"]["spotify"];
     }
 
     function getAlbumCover($info) {
       return $info["images"][1]["url"];
+    }
+
+    function getAlbumURL($info) {
+      return $info["external_urls"]["spotify"];
     }
 
     function getYearRecorded($info) {
@@ -81,10 +87,7 @@
       $track_num = 1;
       $tracks = $info["tracks"]["items"];
       foreach ($tracks as $song) {
-        echo $track_num . ". " . $song["name"];
-        if ($track_num < count($tracks)) {
-          echo "  //  ";
-        }
+        echo $track_num . ". " . $song["name"] . "<br>";
         $track_num += 1;
       }
 

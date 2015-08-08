@@ -26,7 +26,6 @@ $bands = array(
         "Switchfoot",
         "Made in Heights",
         "Mikky Ekko",
-        "The Neighbourhood",
         "Of Monsters and Men",
         "Mumford & Sons",
         "The Naked and Famous",
@@ -37,7 +36,9 @@ $bands = array(
         "Smallpools",
         "AURORA",
         "Snow Patrol",
-        "Lifehouse"
+        "Lifehouse",
+        "Keane",
+        "Phoenix"
         );
 sort($bands);     
 
