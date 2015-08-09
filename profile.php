@@ -3,11 +3,11 @@
   include("bands.php");
   include("functions.php");
   $id = $_GET['id'];
-  $band = $bands[$id];
-  if ($band == "") {
+  if ($id > count($bands)) {
     header("Location: http://" . echo $base_url . ".com/404");
     die();
   }
+  $band = $bands[$id];
   $artist_id = getArtistId($band);
   $json_file = decodeJSON($artist_id); 
   $favicon = getArtistFavicon($json_file);
