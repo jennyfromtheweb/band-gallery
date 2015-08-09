@@ -6,10 +6,6 @@
   include("bands.php");
   include("functions.php");
   $id = $_GET['id'];
-  if ($id > count($bands)) {
-    header("Location: " . echo $base_url . "notfound");
-    exit();
-  }
   $band = $bands[$id];
   $artist_id = getArtistId($band);
   $json_file = decodeJSON($artist_id); 
