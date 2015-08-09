@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <title>Jenny's Music Gallery</title>
   <link rel="stylesheet" href="style.css" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <link rel="icon" 
       type="image/jpg" 
       href="img/favicon.png">
