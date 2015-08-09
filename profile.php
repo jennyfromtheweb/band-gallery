@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+
 <?php 
   $base_url = "http://jennysmusicgallery.herokuapp.com/";
   include("bands.php");
@@ -13,8 +16,6 @@
   $favicon = getArtistFavicon($json_file);
 ?>
 
-<!DOCTYPE html>
-<html>
 <head>
   <meta charset="UTF-8">
   <title><?php echo $band . " // Jenny's Music Gallery"; ?></title>
