@@ -8,7 +8,7 @@
   $id = $_GET['id'];
   if ($id > count($bands)) {
     header("Location: http://" . echo $base_url . ".com/notfound");
-    die();
+    exit();
   }
   $band = $bands[$id];
   $artist_id = getArtistId($band);

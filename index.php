@@ -1,10 +1,8 @@
+<!DOCTYPE html>
+<html>
 <?php 
   $base_url = "http://jennysmusicgallery.herokuapp.com/";
 ?>
-
-<!DOCTYPE html>
-<html>
-
 <head>
   <meta charset="UTF-8">
   <title>Jenny's Music Gallery</title>
