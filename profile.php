@@ -14,7 +14,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title><?php echo $band . " | Jenny's Music Gallery"; ?></title>
+  <title><?php echo $band . " // Jenny's Music Gallery"; ?></title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>style.css" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
@@ -34,17 +34,13 @@
 
 <div class="nav">
   <div class="home">
-    <a href="home" title="Making my way downtown, walking fast, faces pass, and I'm home bound"></a>
+    <a href="home" title="making my way downtown, walking fast, faces pass, and I'm home bound"></a>
   </div>
 
   <div class="random">
     <?php $random = array_rand($bands); ?>
     <a href="/<?php echo $random; ?>" title="hit me baby one more time"></a>
   </div>
-
-  <!-- <div class="follow">
-    <a href="<?php echo getArtistURL($json_file); ?>" class="follow"></a>
-  </div> -->
 </div>
 
 <div class="header">

@@ -19,12 +19,14 @@ footer {
 }
 
 div.footer {
-	font-size: 13px;
+	font-size: 12px;
 	text-align: center;
 	margin-top: 30px;
 	color: #fff;
 	letter-spacing: 0.04em;
 	font-family: 'Lato';
+	font-weight: 100;
+	word-spacing: 0.1em;
 }
 
 
@@ -104,10 +106,8 @@ span {
 	font-weight: 300;
 }
 
-.footer span {
-	font-weight: 100;
+.footer span {	
 	line-height: 23px;
-	word-spacing: 0.1em;
 }
 
 .footer .heart {
@@ -116,12 +116,28 @@ span {
 	margin-left: 2px;
 }
 
-.footer span a {
+.footer div.follow {	
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.footer span.spotify-logo {
+	display: block;
+	width: 15px;
+	height: 15px;
+	background-image: url("img/spotify-logo-vertical-white-rgb.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	float: left;
+	margin-right: 6px;
+}
+
+.footer a {
 	cursor: auto;
 	margin-bottom: 2px;
 }
 
-.footer span a:hover {	
+.footer a:hover {	
 	border-bottom: 1px solid #fff;
 }
 
@@ -288,7 +304,7 @@ div.nav {
 .nav div {
 	width: 40px;
 	height: 40px;
-	margin: 10px;
+	margin: 12px;
 }
 
 .nav div a {
@@ -297,27 +313,6 @@ div.nav {
 
 .nav div a:hover {
 	opacity: 1;
-}
-
-div.follow {
-	margin: 0 auto;
-	margin-top: 13px;
-	display: inline-block;
-	width: 190px;
-	height: 36px;
-}
-
-.follow a {
-	display: block;
-	width: 190px;
-	height: 36px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
-
-	background-image: url("img/listen_on_spotify-round.png");
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 
 .home {	
@@ -340,8 +335,8 @@ div.follow {
 
 .random a {
 	display: block;
-	width: 35px;
-	height: 31px;
+	width: 32px;
+	height: 29px;
 
 	background-image: url("img/shuffle.png");
 	background-size: cover;
@@ -423,6 +418,7 @@ div.overlay {
 .album p {
 	font-size: 16px;
 	width: 251px;
+	line-height: 20px;
 	margin-left: auto;
 	margin-right: auto;
 }

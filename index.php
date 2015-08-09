@@ -33,7 +33,7 @@
 <div class="container main">
     <?php $random = array_rand($bands); ?>
 
-    <a class="button btn paper paper-raise-flatten" href="profile.php?id=<?php echo $random; ?>" >surprise me!</a>
+    <a class="button btn paper paper-raise-flatten" href="band/<?php echo $random; ?>" >surprise me!</a>
     <br class="clear">
     <div id="hide-show"  style="display:block;" class="all-bands">
       <?php 
