@@ -7,7 +7,7 @@
   include("functions.php");
   $id = $_GET['id'];
   if ($id > count($bands)) {
-    header("Location: http://" . echo $base_url . ".com/notfound");
+    header("Location: " . echo $base_url . ".com/notfound");
     exit();
   }
   $band = $bands[$id];
