@@ -33,12 +33,12 @@
 <div class="container main">
     <?php $random = array_rand($bands); ?>
 
-    <a class="button btn paper paper-raise-flatten" href="band/<?php echo $random; ?>" >surprise me!</a>
+    <a class="button btn paper paper-raise-flatten" href="<?php echo $random; ?>" >surprise me!</a>
     <br class="clear">
     <div id="hide-show"  style="display:block;" class="all-bands">
       <?php 
         foreach($bands as $id => $band) { ?>
-          <span><a href="band/<?php echo $id; ?>" class="band"><?php echo $band; ?></a></span><br>
+          <span><a href="<?php echo $id; ?>" class="band"><?php echo $band; ?></a></span><br>
       <?php } ?>
     </div>
 </div>
