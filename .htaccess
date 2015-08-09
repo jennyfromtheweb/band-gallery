@@ -2,3 +2,4 @@ RewriteEngine On
 RewriteRule ^([0-9]+)/?$ profile.php?id=$1
 RewriteRule ^home/?$ index.php
 ErrorDocument 404 http://jennysmusicgallery.herokuapp.com/404page.php
+RewriteRule ^404/?$ 404page.php

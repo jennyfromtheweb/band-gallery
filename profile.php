@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html>
 <?php 
+  $base_url = "http://jennysmusicgallery.herokuapp.com/";
   include("bands.php");
   include("functions.php");
   $id = $_GET['id'];
   $band = $bands[$id];
+  if ($band == "") {
+    header("Location: http://" . echo $base_url . ".com/404");
+    die();
+  }
   $artist_id = getArtistId($band);
   $json_file = decodeJSON($artist_id); 
   $favicon = getArtistFavicon($json_file);
-
-  $base_url = "http://jennysmusicgallery.herokuapp.com/";
 ?>
 
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
   <title><?php echo $band . " // Jenny's Music Gallery"; ?></title>
