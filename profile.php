@@ -39,7 +39,7 @@
 
   <div class="random">
     <?php $random = array_rand($bands); ?>
-    <a href="band/<?php echo $random; ?>" title="hit me baby one more time"></a>
+    <a href="/<?php echo $random; ?>" title="hit me baby one more time"></a>
   </div>
 
   <!-- <div class="follow">
