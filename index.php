@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
+
+<?php 
+  $base_url = "http://jennysmusicgallery.herokuapp.com/";
+?>
+
 <head>
   <meta charset="UTF-8">
   <title>Jenny's Music Gallery</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="<?php echo $base_url; ?>style.css" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="icon" 
       type="image/jpg" 
       href="img/favicon.png">
