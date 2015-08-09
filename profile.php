@@ -34,12 +34,12 @@
 
 <div class="nav">
   <div class="home">
-    <a href="index.php" title="'cause I'm gonna make this place your home"></a>
+    <a href="home" title="Making my way downtown, walking fast, faces pass, and I'm home bound"></a>
   </div>
 
   <div class="random">
     <?php $random = array_rand($bands); ?>
-    <a href="profile.php?id=<?php echo $random; ?>" title="hit me baby one more time"></a>
+    <a href="band/<?php echo $random; ?>" title="hit me baby one more time"></a>
   </div>
 
   <!-- <div class="follow">

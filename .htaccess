@@ -1,2 +1,4 @@
 RewriteEngine On
-RewriteRule ^([0-9]+)/?$ profile.php?id=$1
+RewriteRule ^band/([0-9]+)/?$ profile.php?id=$1
+RewriteRule ^home/?$ index.php
+ErrorDocument 404 http://www.jennysmusicgallery.herokuapp.com/404page.php

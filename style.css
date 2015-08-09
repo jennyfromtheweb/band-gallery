@@ -177,6 +177,39 @@ span {
     background-image: none;
 }
 
+/** 404 **/
+
+.error-page {
+	width: 100%;	
+	font-family: 'Lato';
+	font-size: 22px;	
+	text-align: center;
+	color: #1e1e1e;
+	margin-top: 200px;
+}
+
+.error-page h1 {
+	font-size: 36px;	
+	letter-spacing: 0.04em;
+}
+
+.error-page h2 {
+	font-size: 48px;
+	text-shadow: 2px 2px #aeaeae;
+}
+
+.error-page b {
+	background-color: #1e1e1e;
+	color: #fff;
+}
+
+.error-page a {
+	color: #1e1e1e;
+}
+
+.error-page a:hover {	
+	text-decoration: underline;
+}
 
 
 /** HOMEPAGE **/

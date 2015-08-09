@@ -38,7 +38,7 @@
     <div id="hide-show"  style="display:block;" class="all-bands">
       <?php 
         foreach($bands as $id => $band) { ?>
-          <span><a href="profile.php?id=<?php echo $id; ?>" class="band"><?php echo $band; ?></a></span><br>
+          <span><a href="band/<?php echo $id; ?>" class="band"><?php echo $band; ?></a></span><br>
       <?php } ?>
     </div>
 </div>
