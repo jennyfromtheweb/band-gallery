@@ -1,11 +1,17 @@
+<?php
+$id = $_GET['id'];
+$base_url = "http://jennysmusicgallery.herokuapp.com/";
+include("bands.php");
+if ($id >= count($bands)) {
+  header('Location: ' . $base_url . 'notfound');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
 <?php 
-  $base_url = "http://jennysmusicgallery.herokuapp.com/";
-  include("bands.php");
   include("functions.php");
-  $id = $_GET['id'];
   $band = $bands[$id];
   $artist_id = getArtistId($band);
   $json_file = decodeJSON($artist_id); 
