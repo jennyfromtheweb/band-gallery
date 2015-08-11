@@ -38,7 +38,8 @@ $bands = array(
         "Snow Patrol",
         "Lifehouse",
         "Keane",
-        "Phoenix"
+        "Phoenix",
+        "Andrew McMahon"
         );
 sort($bands);     
 

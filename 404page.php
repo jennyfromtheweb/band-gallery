@@ -16,8 +16,8 @@
  <body>
 
 	<div class="error-page">
-		<h2> 404 </h2>
- 		<h1> "But I've got a <b>blank space</b>, baby." </h1>
+		<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="hidden-link"><h2>404</h2></a>
+ 		<h1> "But I've got a <a href="https://www.youtube.com/watch?v=e-ORhEE9VVg" target="_blank" class="hidden-link"><b>blank space</b></a>, baby." </h1>
  		<span> Sorry, you're trying to reach a page that doesn't exist! <br>
  		<a href="home">Click here to return home.</a></span>
   </div>
