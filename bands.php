@@ -39,7 +39,25 @@ $bands = array(
         "Lifehouse",
         "Keane",
         "Phoenix",
-        "Andrew McMahon"
+        "Andrew McMahon",
+        "Fall Out Boy",
+        "Panic! At The Disco",
+        "Phil Wickham",
+        "Random Forest",
+        "The Album Leaf",
+        "Message to Bears",
+        "Foster the People",
+        "Cold War Kids",
+        "Houses",
+        "Keith Kenniff",
+        "The Paper Kites",
+        "Train",
+        "Young the Giant",
+        "Florence + The Machine",
+        "The xx",
+        "Lana Del Rey",
+        "Birdy",
+        "Porter Robinson"
         );
 sort($bands);     
 
