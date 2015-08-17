@@ -227,6 +227,15 @@ span {
 	text-decoration: underline;
 }
 
+a.hidden-link {
+	color: inherit;
+    cursor: text;
+    text-decoration: none;
+}
+
+a.hidden-link:hover {
+	text-decoration: none;
+}
 
 /** HOMEPAGE **/
 

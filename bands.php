@@ -40,9 +40,6 @@ $bands = array(
         "Keane",
         "Phoenix",
         "Andrew McMahon",
-        "Fall Out Boy",
-        "Panic! At The Disco",
-        "Phil Wickham",
         "The Album Leaf",
         "Foster the People",
         "Cold War Kids",
@@ -54,7 +51,9 @@ $bands = array(
         "Florence + The Machine",
         "Birdy",
         "Porter Robinson",
-        "The Script"
+        "The Script",
+        "Owl City",
+        "Paperwhite"
         );
 sort($bands);     
 
