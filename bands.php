@@ -46,7 +46,6 @@ $bands = array(
         "Houses",
         "Keith Kenniff",
         "The Paper Kites",
-        "Train",
         "Young the Giant",
         "Florence + The Machine",
         "Birdy",
