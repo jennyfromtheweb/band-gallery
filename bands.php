@@ -52,7 +52,11 @@ $bands = array(
         "Porter Robinson",
         "The Script",
         "Owl City",
-        "Paperwhite"
+        "Paperwhite",
+        "Random Forest",
+        "Day Wave",
+        "LANY",
+        "The Chainsmokers"
         );
 sort($bands);     
 
