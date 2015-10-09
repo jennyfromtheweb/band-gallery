@@ -56,7 +56,9 @@ $bands = array(
         "Random Forest",
         "Day Wave",
         "LANY",
-        "The Chainsmokers"
+        "The Chainsmokers",
+        "Troye Sivan",
+        "Carly Rae Jepsen"
         );
 sort($bands);     
 
