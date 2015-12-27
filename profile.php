@@ -66,25 +66,30 @@ if ($id >= count($bands)) {
         <div class="description">
           <div class="overlay"></div>
           <div class="text">
-            <h2><?php echo $name; ?></h2>
-            <h4>(<?php echo getYearRecorded($info); ?>)</h4>
-            <p>
-              <?php displayTrackList($info); ?>
-            </p>
-          </div>
-        </div>
+            <p><?php echo $name; ?></p>
+            <p>(<?php echo getYearRecorded($info); ?>)</p>
+            <?php $track_list = displayTrackList($info); 
+              $track_num = 1;
+              foreach ($track_list as $song) {
+                echo "<p>" . $track_num . ". " . $song["name"] . "</p>";
+                $track_num += 1;
+              } ?>
+
+          
         <?php 
           $track = getRandomTrack($info);
           $preview = getTrackPreview($track);
         ?>
+        </div>
+        </div>
         <div class="audio">
           <audio src="<?php echo $preview; ?>" preload="none" />
         </div>
         <div class="spotify-url"><a href="<?php echo getTrackURL($track); ?>" target="_blank"></a></div>
       </div>
   <?php } ?>
-  <br class="clear"><br><br><br>
-</div>
+  <br class="clear">
+  </div>
 
 <?php include("footer.php"); ?>
 

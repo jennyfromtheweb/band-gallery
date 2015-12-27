@@ -18,7 +18,9 @@
         $full_info_url = $album["href"];
         $full_info = json_decode(file_get_contents($full_info_url), true);
         $name = $full_info["name"];
-        $all_albums[$name] = $full_info;
+        if (!strpos($name, "Commentary")) {
+          $all_albums[$name] = $full_info;
+        }
       }
 
       return $all_albums;
@@ -86,10 +88,12 @@
       $track_list = array();
       $track_num = 1;
       $tracks = $info["tracks"]["items"];
-      foreach ($tracks as $song) {
-        echo $track_num . ". " . $song["name"] . "<br>";
-        $track_num += 1;
-      }
+      // foreach ($tracks as $song) {
+      //   echo $track_num . ". " . $song["name"] . "<br>";
+      //   $track_num += 1;
+      // }
+
+      return $tracks;
 
       /* USING COLUMNS */
       // echo '<div class="columns">';

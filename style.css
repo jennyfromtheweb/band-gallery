@@ -44,7 +44,7 @@ div.footer {
 	height: 130px;
 	display: block;
 	text-align: center;
-	margin-bottom: 15px;
+	/* margin-bottom: 15px; */
 	font-family: 'Montserrat';
 	background: #1e1e1e;
 	padding-top: 25px;
@@ -67,6 +67,7 @@ div.footer {
 .container {
 	min-height: 100%;
 	width: 100%;
+	background-color: #1E1E1E;
 }
 
 hr {
@@ -153,7 +154,7 @@ span {
     margin: 10px;
     overflow: hidden;
     position: relative;
-    width: 140px;
+    width: 160px;
 }
 
 .audiojs .loaded {
@@ -186,8 +187,8 @@ span {
 
 .audiojs {
     font-family: 'Lato';
-    font-size: 10px; /* reduced font size */
-    width: 300px;
+    font-size: 10px;/* reduced font size */
+    width: 100%;
     box-shadow: none;
     background: #1e1e1e;
     background-image: none;
@@ -330,9 +331,8 @@ div.nav {
 
 .home a {
 	display: block;
-	width: 35px;
-	height: 35px;
-
+	width: 32px;
+	height: 32px;
 	background-image: url("img/home.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -344,9 +344,8 @@ div.nav {
 
 .random a {
 	display: block;
-	width: 32px;
-	height: 29px;
-
+	width: 29px;
+	height: 25px;
 	background-image: url("img/shuffle.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -354,63 +353,69 @@ div.nav {
 
 .header h1.band {
 	font-size: 50px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
 }
 
 .album {
 	float: left;
-	width: 300px;
+	width: 25%;
 	height: 300px;
 	background-color: #fff;
-	margin: 63px;
+	/*margin: 63px;*/
+	margin: 0 0 56px;
 	position: relative;
 }
 
 .album img {
 	float: left;
 	vertical-align: center;
-	height: 292px;
-	width: 292px;
-	border: 4px solid #1e1e1e;
+	/*height: 292px;
+	width: 292px;*/
+	width: 100%;
+	/* border: 4px solid #1e1e1e; */
 	border-bottom: none;
 	z-index: -50;
+
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
-div.overlay {
-	background-color: #fefefe;
-	position: absolute;
-	width: 284px;
-	height: 284px;
-	padding: 4px;
-	transition: all 250ms ease-out;
-	z-index: -10;
+.album img:hover {
+	opacity: 0.4;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
 }
 
 .album .description {
 	position: absolute;
-	width: 292px;
-	height: 288px;
+	width: 100%;
+	height: 320px;
 	display: block;
 	text-align: center;
-	padding: 4px;
-	opacity: 0;		
+	/* padding: 4px; */
+	opacity: 0;
 	/*overflow: auto;*/
 	/*z-index: 10;*/
+	transition: all 250ms ease-out;
 }
 
 .album .description:hover {
-	opacity: 0.7;
+	opacity: 1;
+	transition: all 250ms ease-out;
 }
 
 .album .text {
 	font-family: 'Josefin Slab';
 	letter-spacing: 0.02em;
-	margin: 10px;
+	padding: 2%;
 	z-index: 10;
-
 	overflow: auto;
 	position: absolute;
-	width: 272px;
-	height: 272px;
+	width: 95%;
+	height: 307px;
 	display: block;
 }
 
@@ -424,12 +429,63 @@ div.overlay {
 	text-transform: uppercase;
 }
 
-.album p {
-	font-size: 16px;
-	width: 251px;
+.text p {
+	font-size: 14px;
+	width: 300px;
 	line-height: 20px;
 	margin-left: auto;
 	margin-right: auto;
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 0;
+	background: rgba(255,255,255,0.9);
+	color: #2f3238;
+	text-transform: none;
+	font-weight: 500;
+	/* font-size: 75%; */
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-360px,0,0);
+}
+
+.album p:first-child {
+	font-size: 24px;
+	text-transform: uppercase;
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.album p:nth-of-type(2) {
+	font-size: 18px;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.album p {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.album:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.album:hover p:nth-of-type(2) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.album:hover p {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.text:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
 }
 
 div.spotify-url {

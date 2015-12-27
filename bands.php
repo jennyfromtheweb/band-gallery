@@ -59,7 +59,7 @@ $bands = array(
         "The Chainsmokers",
         "Troye Sivan",
         "Carly Rae Jepsen",
-        "Twenty One Pilots",
+        "twenty one pilots",
         "ASTR"
         );
 sort($bands);     
