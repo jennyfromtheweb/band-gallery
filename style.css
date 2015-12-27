@@ -1,11 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Patua+One|Questrial|Nixie+One);
+
 /** BASE **/
 html {
     position: relative;
     min-height: 100%;
 }
 body {
-    margin: 0 0 80px; /* bottom = footer height */
-    background-color: #fdfdfd;
+    margin: 0 0 80px;/* bottom = footer height */
+    background-color: #4E4E4E;
 }
 
 footer {
@@ -14,17 +16,17 @@ footer {
     bottom: 0;
     height: 80px;
     width: 100%;
-    background: #1e1e1e;    
-	border-top: #7a7a7a solid 2px;
+    background: #0E0E0E;
+    /* border-top: #7a7a7a solid 2px; */
 }
 
 div.footer {
 	font-size: 12px;
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 25px;
 	color: #fff;
 	letter-spacing: 0.04em;
-	font-family: 'Lato';
+	font-family: Questrial;
 	font-weight: 100;
 	word-spacing: 0.1em;
 }
@@ -46,17 +48,17 @@ div.footer {
 	text-align: center;
 	/* margin-bottom: 15px; */
 	font-family: 'Montserrat';
-	background: #1e1e1e;
-	padding-top: 25px;
-	padding-bottom: 30px;
+	background: #1E1E1E;
+	padding-top: 20px;
+	padding-bottom: 35px;
 	color: #fff;
-	border-bottom: #7a7a7a solid 2px;
+	/* border-bottom: #7a7a7a solid 2px; */
 }
 
 .header h1 {
 	font-weight: 500;
 	font-size: 40px;
-	margin-top: 20px;
+	margin-top: 26px;
 	margin-bottom: 20px;
 }
 
@@ -67,7 +69,6 @@ div.footer {
 .container {
 	min-height: 100%;
 	width: 100%;
-	background-color: #1E1E1E;
 }
 
 hr {
@@ -96,11 +97,11 @@ a.button {
 	/*padding: 4px;
 	padding-left: 8px;
 	padding-right: 8px;*/
-	box-shadow: 1px 2px 8px #888888;
+	/* box-shadow: 1px 2px 8px #888888; */
 }
 
 span {
-	font-family: 'Lato';
+	font-family: Questrial;
 }
 
 .header span {
@@ -124,8 +125,8 @@ span {
 
 .footer span.spotify-logo {
 	display: block;
-	width: 15px;
-	height: 15px;
+	width: 14px;
+	height: 14px;
 	background-image: url("img/spotify-logo-vertical-white-rgb.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -149,12 +150,13 @@ span {
     border-bottom: 0 none;
     border-left: 0 none;
     border-top: 1px solid #3F3F3F;
+    border-radius: 3px;
     float: left;
-    height: 14px;
-    margin: 10px;
+    height: 10px;
+    margin: 12px 13px;
     overflow: hidden;
     position: relative;
-    width: 160px;
+    width: 225px;
 }
 
 .audiojs .loaded {
@@ -170,7 +172,7 @@ span {
 }
 
 .audiojs .play-pause {
-	width: 20px;
+	width: 25px;
 	padding: 4px 5px;
 }
 
@@ -180,9 +182,10 @@ span {
     float: left;
     height: 36px;
     line-height: 36px;
-    margin: 0; /* no margin */
-    padding: 0 6px 0 5px; /* 2px smaller left padding */
+    margin: 0;/* no margin */
+    padding: 0 6px 0 5px;/* 2px smaller left padding */
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 .audiojs {
@@ -242,12 +245,13 @@ a.hidden-link:hover {
 
 .container.main {
 	width: 100%;
-	height: 280px;
+	height: 500px;
 	display: block;
 	margin: 0 auto;
 	padding-top: 25px;
-	line-height: 20px;	
+	line-height: 20px;
 	text-align: center;
+	background-color: #4E4E4E;
 }
 
 .menu a {
@@ -259,12 +263,12 @@ a.hidden-link:hover {
 
 a.band {
 	cursor: crosshair;
-	font-family: 'Josefin Slab';
-	font-weight: 400;
+	font-family: 'Questrial';
+	font-weight: 300;
 	font-size: 20px;
-	color: #000000;
+	color: #FFFFFF;
 	text-decoration: none;
-	text-transform: none;	
+	text-transform: none;
 	transition: all 250ms ease-out;
 }
 
@@ -303,9 +307,9 @@ div.all-bands {
 
 div.nav {
 	font-family: 'Lato';
-	background-color: #1e1e1e;
+	background-color: #0E0E0E;
 	width: 100%;
-	height: 60px;
+	height: 50px;
 	text-align: center;
 	z-index: 100;
 	position: absolute;
@@ -331,8 +335,8 @@ div.nav {
 
 .home a {
 	display: block;
-	width: 32px;
-	height: 32px;
+	width: 30px;
+	height: 30px;
 	background-image: url("img/home.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -344,8 +348,8 @@ div.nav {
 
 .random a {
 	display: block;
-	width: 29px;
-	height: 25px;
+	width: 28px;
+	height: 24px;
 	background-image: url("img/shuffle.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -354,7 +358,9 @@ div.nav {
 .header h1.band {
 	font-size: 50px;
 	text-transform: uppercase;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.02em;
+	margin-top: 45px;
+	word-spacing: 0.1em;
 }
 
 .album {
@@ -408,7 +414,7 @@ div.nav {
 }
 
 .album .text {
-	font-family: 'Josefin Slab';
+	font-family: 'Questrial';
 	letter-spacing: 0.02em;
 	padding: 2%;
 	z-index: 10;
@@ -499,8 +505,7 @@ div.spotify-url {
 	height: 24px;
 	display: block;
 	float: right;
-	margin: 6px 6px;
-
+	margin: 6px 8px;
 	background-image: url("img/spotify-logo-primary-vertical-dark-background-rgb.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -516,9 +521,9 @@ div.spotify-url {
   margin: 20px auto;
   padding: 10px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   /*color: #000;*/
-  color: #da4e4e;;
+  color: #23CF5F;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -570,3 +575,36 @@ div.spotify-url {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
 }
 
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #23CF5F;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}

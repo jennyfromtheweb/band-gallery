@@ -84,40 +84,11 @@
       return $fragments[0];
     }
 
-    function displayTrackList($info) {
+    function getTrackList($info) {
       $track_list = array();
       $track_num = 1;
       $tracks = $info["tracks"]["items"];
-      // foreach ($tracks as $song) {
-      //   echo $track_num . ". " . $song["name"] . "<br>";
-      //   $track_num += 1;
-      // }
-
       return $tracks;
-
-      /* USING COLUMNS */
-      // echo '<div class="columns">';
-      // if (count($tracks) < 7) {
-      //   echo '<ol>';
-      //   foreach ($tracks as $song) {        
-      //     echo "<li>" . $song["name"] . "<br>" . "</li>";
-      //     $track_num += 1;
-      //   }
-      //   echo '</ol>';
-      // } else {
-      //   echo '<ol>';
-      //   echo '<div id="column1">';
-      //   foreach ($tracks as $song) {        
-      //     if ($track_num == 7) {
-      //       echo '</div>';
-      //       echo '<div id="column2">';
-      //     }
-      //     echo "<li>" . $song["name"] . "<br>" . "</li>";
-      //     $track_num += 1;
-      //   }
-      //   echo '</div></ol>';
-      // }
-      // echo '</div>';
     }
 
 ?>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <?php 
-  $base_url = "http://jennysmusicgallery.herokuapp.com/";
+  // $base_url = "http://jennysmusicgallery.herokuapp.com/";
+$base_url = "";
 ?>
 <head>
   <meta charset="UTF-8">
   <title>Jenny's Music Gallery</title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>style.css" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <link rel="icon" 
       type="image/jpg" 
@@ -31,7 +31,7 @@
 <div class="container main">
     <?php $random = array_rand($bands); ?>
 
-    <a class="button btn paper paper-raise-flatten" href="<?php echo $random; ?>" >surprise me!</a>
+    <a class="button btn hvr-underline-from-center" href="<?php echo $random; ?>" >surprise me!</a>
     <br class="clear">
     <div id="hide-show"  style="display:block;" class="all-bands">
       <?php 

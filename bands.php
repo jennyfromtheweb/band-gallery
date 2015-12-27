@@ -62,6 +62,6 @@ $bands = array(
         "twenty one pilots",
         "ASTR"
         );
-sort($bands);     
+natcasesort($bands);     
 
 ?>

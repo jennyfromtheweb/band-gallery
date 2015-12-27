@@ -1,6 +1,7 @@
 <?php
 $id = $_GET['id'];
-$base_url = "http://jennysmusicgallery.herokuapp.com/";
+// $base_url = "http://jennysmusicgallery.herokuapp.com/";
+$base_url = "";
 include("bands.php");
 if ($id >= count($bands)) {
   header('Location: ' . $base_url . 'notfound');
@@ -23,7 +24,6 @@ if ($id >= count($bands)) {
   <title><?php echo $band . " // Jenny's Music Gallery"; ?></title>
   <link rel="stylesheet" href="<?php echo $base_url; ?>style.css" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <script src="<?php echo $base_url; ?>audiojs/audio.min.js" type="text/javascript"></script>
   <link rel="icon" 
@@ -68,7 +68,7 @@ if ($id >= count($bands)) {
           <div class="text">
             <p><?php echo $name; ?></p>
             <p>(<?php echo getYearRecorded($info); ?>)</p>
-            <?php $track_list = displayTrackList($info); 
+            <?php $track_list = getTrackList($info); 
               $track_num = 1;
               foreach ($track_list as $song) {
                 echo "<p>" . $track_num . ". " . $song["name"] . "</p>";
