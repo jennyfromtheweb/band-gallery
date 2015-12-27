@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <?php 
-  // $base_url = "http://jennysmusicgallery.herokuapp.com/";
-$base_url = "";
+  $base_url = "http://jennysmusicgallery.herokuapp.com/";
+// $base_url = "";
 ?>
 <head>
   <meta charset="UTF-8">

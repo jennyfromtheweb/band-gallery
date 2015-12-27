@@ -1,7 +1,7 @@
 <?php
 $id = $_GET['id'];
-// $base_url = "http://jennysmusicgallery.herokuapp.com/";
-$base_url = "";
+$base_url = "http://jennysmusicgallery.herokuapp.com/";
+// $base_url = "";
 include("bands.php");
 if ($id >= count($bands)) {
   header('Location: ' . $base_url . 'notfound');
