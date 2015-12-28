@@ -17,7 +17,7 @@ footer {
     height: 80px;
     width: 100%;
     background: #0E0E0E;
-    /* border-top: #7a7a7a solid 2px; */
+    border-top: #23CF5F solid 2px;
 }
 
 div.footer {
@@ -52,7 +52,7 @@ div.footer {
 	padding-top: 20px;
 	padding-bottom: 35px;
 	color: #fff;
-	/* border-bottom: #7a7a7a solid 2px; */
+	border-bottom: #23CF5F solid 2px;
 }
 
 .header h1 {
@@ -167,8 +167,8 @@ span {
 
 .audiojs .progress {
 	border: none;
-	background: #f1f1f1;
-    background-image: none;
+	background: #23CF5F;
+	background-image: none;
 }
 
 .audiojs .play-pause {
@@ -313,6 +313,7 @@ div.nav {
 	text-align: center;
 	z-index: 100;
 	position: absolute;
+	border-bottom: #4E4E4E solid 1px;
 }
 
 .nav div {
@@ -369,7 +370,7 @@ div.nav {
 	height: 300px;
 	background-color: #fff;
 	/*margin: 63px;*/
-	margin: 0 0 56px;
+	margin: 0 0 36px;
 	position: relative;
 }
 
@@ -379,10 +380,10 @@ div.nav {
 	/*height: 292px;
 	width: 292px;*/
 	width: 100%;
+	height: 300px;
 	/* border: 4px solid #1e1e1e; */
 	border-bottom: none;
 	z-index: -50;
-
 	-webkit-transition: opacity 1s, -webkit-transform 1s;
 	transition: opacity 1s, transform 1s;
 	-webkit-backface-visibility: hidden;
@@ -398,7 +399,7 @@ div.nav {
 .album .description {
 	position: absolute;
 	width: 100%;
-	height: 320px;
+	height: 300px;
 	display: block;
 	text-align: center;
 	/* padding: 4px; */
@@ -420,8 +421,8 @@ div.nav {
 	z-index: 10;
 	overflow: auto;
 	position: absolute;
-	width: 95%;
-	height: 307px;
+	width: 96%;
+	height: 286px;
 	display: block;
 }
 
@@ -496,8 +497,8 @@ div.nav {
 
 div.spotify-url {
 	z-index: 1;
-	margin-top: -40px;
-	height: 40px;
+	margin-top: -36px;
+	height: 36px;
 }
 
 .spotify-url a {
@@ -607,4 +608,28 @@ div.spotify-url {
 .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
+}
+
+/* PROGRESS BAR ANIMATION */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #23CF5F;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
 }

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <?php 
-  $base_url = "http://jennysmusicgallery.herokuapp.com/";
-// $base_url = "";
+  // $base_url = "http://jennysmusicgallery.herokuapp.com/";
+$base_url = "";
 ?>
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="<?php echo $base_url; ?>style.css" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <script src="<?php echo $base_url; ?>pace.min.js" type="text/javascript"></script>
   <link rel="icon" 
       type="image/jpg" 
       href="img/favicon.png">

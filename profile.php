@@ -1,7 +1,7 @@
 <?php
 $id = $_GET['id'];
-$base_url = "http://jennysmusicgallery.herokuapp.com/";
-// $base_url = "";
+// $base_url = "http://jennysmusicgallery.herokuapp.com/";
+$base_url = "";
 include("bands.php");
 if ($id >= count($bands)) {
   header('Location: ' . $base_url . 'notfound');
@@ -26,6 +26,7 @@ if ($id >= count($bands)) {
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic,300italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   <script src="<?php echo $base_url; ?>audiojs/audio.min.js" type="text/javascript"></script>
+  <script src="<?php echo $base_url; ?>pace.min.js" type="text/javascript"></script>
   <link rel="icon" 
       type="image/jpg" 
       href="<?php echo $favicon; ?>">
@@ -64,7 +65,6 @@ if ($id >= count($bands)) {
       <div class="album">
         <img src="<?php echo getAlbumCover($info); ?>">
         <div class="description">
-          <div class="overlay"></div>
           <div class="text">
             <p><?php echo $name; ?></p>
             <p>(<?php echo getYearRecorded($info); ?>)</p>
