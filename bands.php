@@ -25,7 +25,6 @@ $bands = array(
         "Hillsong United",
         "Switchfoot",
         "Made in Heights",
-        "Mikky Ekko",
         "Of Monsters and Men",
         "Mumford & Sons",
         "The Naked and Famous",
@@ -35,26 +34,23 @@ $bands = array(
         "MisterWives",
         "Smallpools",
         "AURORA",
-        "Snow Patrol",
-        "Lifehouse",
         "Andrew McMahon",
         "The Album Leaf",
         "Foster the People",
         "Cold War Kids",
         "Keith Kenniff",
-        "Young the Giant",
+        "Phoenix",
         "Florence + The Machine",
         "Birdy",
-        "Porter Robinson",
-        "The Script",
         "Owl City",
         "Day Wave",
-        "LANY",
         "The Chainsmokers",
         "Troye Sivan",
         "Carly Rae Jepsen",
         "twenty one pilots",
-        "ASTR"
+        "Melanie Martinez",
+        "Jai Wolf",
+        "Brothertiger"
         );
 natcasesort($bands);     
 
