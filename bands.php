@@ -18,9 +18,8 @@ $bands = array(
         "Helios",
         "Imagine Dragons",
         "M83",
-        "Odesza",
+        "ODESZA",
         "Sia",
-        "Benjamin Francis Leftwich",
         "Bon Iver",
         "Hillsong United",
         "Switchfoot",
@@ -50,7 +49,10 @@ $bands = array(
         "twenty one pilots",
         "Melanie Martinez",
         "Jai Wolf",
-        "Brothertiger"
+        "Brothertiger",
+        "Børns",
+        "Kiiara",
+        "LANY"
         );
 natcasesort($bands);     
 
